@@ -6,16 +6,17 @@ Un ejemplo simple para probar Grafana con telegraf y influxdb.
 
 Después de clonar el proyecto:
 
-git clone https://github.com/thecookieproject/docker.git
+`git clone https://github.com/thecookieproject/docker.git`
 
-´´´
+
+```
 cd 01-telegraf-influxdb-grafana
 mkdir {grafana,data}
 docker-compose up 
-
+```
 ### Diretorios 
 
-* Grafana : Almacena las configuraciones localmente 
+* grafana : Almacena las configuraciones localmente 
 * data    : Almacena los datos de influxdb 
 
 ### Grafana dashboards 
@@ -24,5 +25,3 @@ docker-compose up
 
  En primera instancia se debe configurar un nuevo datasource --> http://influxdb:8086.
  Importar el dashboard ID: 11912.
-
- 

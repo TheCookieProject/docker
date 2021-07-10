@@ -4,7 +4,6 @@ services:
     grafana: 
         image: grafana/grafana:6.7.4-ubuntu
         container_name: grafana_m
-        restart: always
         ports:  
             - "3000:3000"
         volumes: 
@@ -16,7 +15,6 @@ services:
     telegraf: 
         container_name: push_metric
         image: telegraf 
-        restart: always
         depends_on:
             - influxdb
         volumes: 
@@ -25,7 +23,6 @@ services:
     influxdb:
         image: influxdb:1.8.6
         container_name: influxdb_t
-        restart: always 
         volumes: 
             - "$PWD/data:/var/lib/influxdb"
         
